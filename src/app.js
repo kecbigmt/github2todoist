@@ -2,7 +2,8 @@ import http from 'http';
 import request from 'request';
 import uuid from 'node-uuid';
 
-const token = process.env.TODOIST_TOKEN;
+const TOKEN = process.env.TODOIST_TOKEN;
+const PORT = process.env.PORT || 5000;
 
 const addTask = (token, sync_token, project_id, content, note, callback) => {
   const item_id = uuid.v4();
@@ -64,7 +65,7 @@ http.createServer((req, res) => {
           'url': 'https://todoist.com/api/v7/sync',
           'method': 'POST',
           'form': {
-            'token': token,
+            'token': TOKEN,
             'sync_token': '*',
             'resource_types': '["projects"]'
           }
@@ -90,7 +91,7 @@ http.createServer((req, res) => {
               if (project_id == "") {
                 console.log("[ERROR]http.createServer: req.on: request: inbox project not found: body=%s", body);
               } else {
-                addTask(token, sync_token, project_id, title, url, (res, body) => {
+                addTask(TOKEN, sync_token, project_id, title, url, (res, body) => {
                   const id = JSON.parse(body).id;
                   console.log("[INFO]task added: title=%s url=%s", title, url);
                 });
@@ -106,4 +107,4 @@ http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/plain'})
     res.end('OK')
   }
-}).listen(8080);
+}).listen(PORT);
