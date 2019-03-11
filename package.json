@@ -1,13 +1,11 @@
 {
-  "name": "git2todo",
+  "name": "github2todoist",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "node-uuid": "1.4.8",
-    "request": "2.88.0"
-  },
-  "devDependencies": {
+    "request": "2.88.0",
     "babel-cli": "6.26.0",
     "babel-preset-env": "1.7.0"
   },
@@ -15,5 +13,6 @@
     "start": "babel-node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "kecy"
+  "author": "kecy",
+  "license": "MIT"
 }
