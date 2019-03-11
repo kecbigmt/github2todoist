@@ -1,18 +1,28 @@
 {
   "name": "github2todoist",
   "version": "1.0.0",
-  "description": "",
+  "description": "GitHubで作成されたissueをTodoistにタスクとして追加するHerokuアプリ",
   "main": "app.js",
   "dependencies": {
     "node-uuid": "1.4.8",
-    "request": "2.88.0",
-    "babel-cli": "6.26.0",
-    "babel-preset-env": "1.7.0"
+    "request": "2.88.0"
   },
   "scripts": {
-    "start": "babel-node app.js",
+    "start": "node --optimize_for_size --max_old_space_size=920 --gc_interval=100 app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kecy",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kecbigmt/github2todoist.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kecbigmt/github2todoist/issues"
+  },
+  "homepage": "https://github.com/kecbigmt/github2todoist#readme",
+  "engines": {
+    "node": "10.15.3"
+  }
 }
