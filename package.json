@@ -1,0 +1,19 @@
+{
+  "name": "git2todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-uuid": "1.4.8",
+    "request": "2.88.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0"
+  },
+  "scripts": {
+    "start": "babel-node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kecy"
+}
