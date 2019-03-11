@@ -1,0 +1,2 @@
+# github2todoist
+GitHubで作成されたissueをTodoistにタスクとして追加するHerokuアプリ
